@@ -1,0 +1,71 @@
+body {
+  background-color: #111111;
+  color: white;
+  font-family: TimesNewRoman;
+}
+
+h1 {
+  padding-top: 30px;
+  font-family: TimesNewRoman; 
+}
+
+h1:hover {
+  color: #0043aa;
+  background-size: 2px 33px;
+}
+
+h2 {
+  font-family: TimesNewRoman;
+}
+h3 {
+  font-family: TimesNewRoman;
+}
+h4 {
+  font-family: TimesNewRoman;
+}
+h5 {
+  font-family: TimesNewRoman;
+}
+
+.inverted {
+  background-color: #111111 !important;
+  color: white;
+}
+
+.sizeable {
+  width: 10vw !important;
+  min-width: 100px;
+}
+
+.logo {
+  width: 10vw !important;
+  min-width: 70px;
+}
+
+.article {
+  width: 100%;
+  cursor: pointer;
+}
+
+.grid {
+  width: 100%;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+#site {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+#toc {
+  order: 0;
+}
+
+#content {
+  width: 100%;
+  order: 1;
+}
+

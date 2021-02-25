@@ -1,1 +1,78 @@
-test
+<head>
+  <title>Magazyn Rozłam</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img class="logo" src="assets/img/drawing.svg"/>
+    <h5 onclick="window.location.href='about/'" class="about">O nas</h5>
+    <h5 onclick="window.location.href='contact/'" class="contact">Kontakt</h5>
+  </div>
+  <p class="arrow">↓</p>
+  <div class="article one">
+    <div class="ui grid middle aligned">
+      <div class="center aligned column">
+        <h1 class="clickable" onclick="window.location.href='wydania/RZL001.pdf'">„Tytuł Wydania”</h1>
+      </div>
+    </div>
+    <h4 class="foot one">RZŁ001A/2021</h4>
+  </div>
+  <div class="article two">
+    <div class="ui grid middle aligned">
+      <div class="center aligned column">
+        <h1 class="clickable" onclick="window.location.href='wydania/RZL002.pdf'">„Tytuł drugiego Wydania”</h1>
+      </div>
+    </div>
+    <h4 class="foot two">RZŁ003C/2021</h4>
+  </div>
+  <div class="article three">
+    <div class="ui grid middle aligned">
+      <div class="center aligned column">
+        <h1 class="clickable" onclick="window.location.href='wydania/RZL003.pdf'">„No i jeszcze jedno”</h1>
+      </div>
+    </div>
+    <h4 class="foot three">RZŁ012B/2021</h4>
+  </div>
+
+  <script>
+    var prev = false;
+    var p = $(".article.one").height();
+
+    window.addEventListener('scroll',function(e){
+      var next = window.scrollY;
+      if(prev){
+        return;
+      }
+
+      if(next % p < Math.floor(p/2)){
+        prev = true;
+        $('html, body').animate({
+          scrollTop: Math.floor((next) / p) * p + p
+        }, 500);
+        setTimeout(function(){
+          console.log("fin");
+          prev = false;
+        }, 600);
+      } else if(next % p == 0) {
+        return;
+      } else { 
+        prev = true;
+        $('html, body').animate({
+          scrollTop: Math.floor((next) / p) * p
+        }, 500);
+        setTimeout(function(){
+          console.log("fin");
+          prev = false;
+        }, 600);
+      }
+    })
+  </script>
+</body>

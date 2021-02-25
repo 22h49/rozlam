@@ -1,17 +1,26 @@
 body {
+  height: 100vh;
   background-color: #111111;
   color: white;
   font-family: TimesNewRoman;
 }
 
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
-  padding-top: 30px;
+  font-size: 25pt;
   font-family: TimesNewRoman; 
 }
 
 h1:hover {
-  color: #0043aa;
-  background-size: 2px 33px;
+  cursor: pointer;
 }
 
 h2 {
@@ -27,45 +36,110 @@ h5 {
   font-family: TimesNewRoman;
 }
 
+.grid {
+  margin: 0 !important;
+  height: 100vh;
+}
+
 .inverted {
   background-color: #111111 !important;
   color: white;
 }
 
-.sizeable {
-  width: 10vw !important;
-  min-width: 100px;
-}
-
-.logo {
-  width: 10vw !important;
-  min-width: 70px;
-}
-
 .article {
-  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.article.one {
+  background-image: url("img/RZL001.jpg");
+}
+
+.article.two {
+  background-image: url("img/RZL002.jpg");
+}
+
+.article.three {
+  background-image: url("img/RZL003.jpg");
+}
+
+.threeth {
+  margin: auto;
+  width: 400px;
+}
+
+.dark {
+  color: #000000;
+}
+
+.blue {
+  color: #0000aa;
+}
+.foot {
+  position: absolute;
+  right: 10px;
+}
+
+.foot.one {
+  bottom: calc(0*-100vh + 10px);
+}
+
+.foot.two {
+  bottom: calc(1*-100vh + 10px);
+}
+
+.foot.three {
+  bottom: calc(2*-100vh + 10px);
+}
+
+.arrow {
+  font-size: 35pt;
+  position: fixed;
+  right: 50%;
+  margin: 0;
+  bottom: 5px;
+}
+
+.sidebar {
+  color: #000000;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+}
+
+.contact {
+  margin-top: 0;
+}
+
+.about {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.back {
+  text-decoration: underline;
+}
+
+.back:hover {
   cursor: pointer;
 }
 
-.grid {
-  width: 100%;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+.clickable:hover {
+  cursor: pointer;
 }
 
-
-#site {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+.sidebar:hover {
+  cursor: pointer;
 }
 
-#toc {
-  order: 0;
+.logo {
+  width: 40px;
 }
 
-#content {
-  width: 100%;
-  order: 1;
+.logo_block {
+  width: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
-
